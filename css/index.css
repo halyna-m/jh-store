@@ -91,7 +91,7 @@ body {
 }
 
 .banner h1 {
-    font-size: 58px;
+    font-size: 44px;
     font-weight: 900;
     margin-bottom: 40px;
 }
@@ -99,6 +99,12 @@ body {
 @media (min-width: 900px) {
     .banner h1 {
         font-size: 76px;
+    }
+}
+
+@media (min-width: 500px) {
+    .banner h1 {
+        font-size: 58px;
     }
 }
 
