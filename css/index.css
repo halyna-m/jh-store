@@ -10,6 +10,8 @@ h1, h2, h3, p, button, span, a, div, section, article {
     font-family: Poppins, sans-serif;
     --main-color: #000;
     --brand-color: #0e38b1;
+    --second-brand-color: #081f62;
+    --white-color: #fff;
 }
 
 body {
@@ -19,7 +21,7 @@ body {
 
 .logo {
     font-family: Sarala, sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     margin-left: 50px;
     font-weight: bold;
@@ -28,13 +30,17 @@ body {
 .menu a {
     display: block;
     text-decoration: none;
-    color: #000;
+    color: var(--main-color);
     margin: 10px;
     font-weight: 500;
     font-size: 15px;
 }
 
-@media (max-width: 900px) {
+.menu a:hover {
+    color: var(--brand-color);
+}
+
+@media (max-width: 735px) {
     header nav .menu {
         display: flex;
         justify-content: center;
@@ -43,7 +49,7 @@ body {
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 735px) {
     header nav {
         display: flex;
     }
@@ -57,20 +63,21 @@ body {
 }
 
 .button {
-    color: #0e38b1;
-    border: 2px solid #0e38b1;
-    border-radius: 5px;
+    color: var(--second-brand-color);
+    font-size: 11px;
+    border: 2px solid var(--brand-color);
+    border-radius: 25px;
     padding: 10px 20px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: #fff;
+    background-color: var(--white-color);
     transition: background-color 1s;
 }
 
 .button:hover {
-    background-color: #0e38b1;
-    color: #fff;
+    background-color: var(--brand-color);
+    color: var(--white-color);
 }
 
 .nav-button {
@@ -91,9 +98,15 @@ body {
 }
 
 .banner h1 {
-    font-size: 44px;
+    font-size: 38px;
     font-weight: 900;
     margin-bottom: 40px;
+}
+
+@media (min-width: 405px) {
+    .banner h1 {
+        font-size: 44px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -113,23 +126,28 @@ h1 span {
     max-height: 80px;
 }
 
-.brand-color {
-    color: #0e38b1;
+.start-banner-name {
+    color: var(--brand-color);
 }
 
-.second-color {
-    color: #fff;
+.end-banner-name {
+    color: var(--white-color);
 }
 
 .main-description {
-    color: #fff;
+    color: var(--white-color);
     font-size: 18px;
 }
 
 .banner-button {
-    background-color: #0e38b1;
-    color: #fff;
+    background-color: var(--brand-color);
+    color: var(--white-color);
     margin-top: 3rem;
+}
+
+.banner-button:hover {
+    background-color: var(--white-color);
+    color: var(--second-brand-color);
 }
 
 h2 {
@@ -139,12 +157,11 @@ h2 {
 
 h3 {
     font-size: 22px;
-    color: #0e38b1;
+    color: var(--brand-color);
     margin: 20px 0;
 }
 
 img {
-    max-width: 400px;
     display: block;
     margin: auto;
 }
@@ -176,21 +193,40 @@ img {
     }
 }
 
+.promotions-bracelets {
+    color: var(--main-color);
+}
+
 .switchover {
+    color: var(--white-color);
     min-height: 400px;
+    background-image: url("../img/switchover.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    margin: 20px 0;
+}
+
+.switchover h2 {
+    font-size: 60px;
+    padding: 0 150px;
+    text-transform: uppercase;
 }
 
 .winter-2021-collection {
     background: linear-gradient(rgba(38, 37, 28, 0.5), rgba(82, 80, 70, 0.3)), url(../img/winter-2021-collection.jpg) center;
     background-size: cover;
     min-height: 600px;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .footer-menu a {
     display: block;
     text-decoration: none;
-    color: #000;
+    color: var(--main-color);
     width: 300px;
     margin: 10px;
 }
