@@ -85,7 +85,7 @@ body {
     margin: 20px;
 }
 
-.banner {
+.banner, .winter-2021-collection {
     background-image: url("../img/banner.jpg");
     background-size: cover;
     background-position: center;
@@ -97,27 +97,27 @@ body {
     padding: 0 3rem;
 }
 
-.banner h1 {
+.banner h1, h2.winter-2021-name {
     font-size: 38px;
     font-weight: 900;
     margin-bottom: 40px;
 }
 
 @media (min-width: 405px) {
-    .banner h1 {
+    .banner h1, h2.winter-2021-name {
         font-size: 44px;
     }
 }
 
-@media (min-width: 900px) {
-    .banner h1 {
-        font-size: 76px;
+@media (min-width: 500px) {
+    .banner h1, h2.winter-2021-name {
+        font-size: 58px;
     }
 }
 
-@media (min-width: 500px) {
-    .banner h1 {
-        font-size: 58px;
+@media (min-width: 900px) {
+    .banner h1, h2.winter-2021-name {
+        font-size: 76px;
     }
 }
 
@@ -126,11 +126,11 @@ h1 span {
     max-height: 80px;
 }
 
-.start-banner-name {
+.start-banner-name, .number-winter-2021-name {
     color: var(--brand-color);
 }
 
-.end-banner-name {
+.end-banner-name, .main-winter-2021-name {
     color: var(--white-color);
 }
 
@@ -151,7 +151,8 @@ h1 span {
 }
 
 h2 {
-    font-size: 30px;
+    margin: 2rem 1rem;
+    font-size: 38px;
     text-align: center;
 }
 
@@ -164,30 +165,22 @@ h3 {
 img {
     display: block;
     margin: auto;
-}
-
-.promotions h2 {
-    margin: 3rem 1rem;
-    font-size: 38px;
+    width: 100%;
 }
 
 .promotion-category {
     margin: 10px;
 }
 
-.promotions-wrapper img {
-   width: 100%;
-}
-
 @media (min-width: 700px) {
-    .promotions-wrapper {
+    .promotions-wrapper, .best-selling-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 1050px) {
-    .promotions-wrapper {
+    .promotions-wrapper, .best-selling-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -216,11 +209,70 @@ img {
     text-transform: uppercase;
 }
 
+.best-selling-card {
+    margin: 20px;
+}
+
+.best-selling-card h3 {
+    color: var(--second-brand-color);
+}
+
+.price {
+    color: var(--brand-color);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 5px 0 20px 0;
+}
+
+.best-selling-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding-top: 0;
+}
+
 .winter-2021-collection {
     background: linear-gradient(rgba(38, 37, 28, 0.5), rgba(82, 80, 70, 0.3)), url(../img/winter-2021-collection.jpg) center;
     background-size: cover;
     min-height: 600px;
     color: var(--white-color);
+    margin-top: 50px;
+}
+
+.winter-2021-name {
+    text-align: left;
+    margin-left: 0;
+}
+
+@media (min-width: 700px) {
+    .our-fave-finds-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1050px) {
+    .our-fave-finds-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.our-fave-finds h2{
+    text-align: left;
+    margin: 25px 0;
+}
+
+.our-fave-finds p {
+    margin-bottom: 30px;
+}
+
+.rings {
+    margin: 10px;
+}
+
+article.rings h3 {
+    font-size: 18px;
 }
 
 .footer-menu a {
