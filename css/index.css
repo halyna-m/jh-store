@@ -11,6 +11,7 @@ h1, h2, h3, p, button, span, a, div, section, article {
     --main-color: #000;
     --brand-color: #0e38b1;
     --second-brand-color: #081f62;
+    --third-brand-color: #6f8eeb;
     --white-color: #fff;
 }
 
@@ -130,7 +131,7 @@ h1 span {
     color: var(--brand-color);
 }
 
-.end-banner-name, .main-winter-2021-name {
+.end-banner-name, .main-winter-2021-name, .switchover-end {
     color: var(--white-color);
 }
 
@@ -205,8 +206,10 @@ img {
 
 .switchover h2 {
     font-size: 60px;
-    padding: 0 150px;
-    text-transform: uppercase;
+}
+
+.switchover-start {
+    color: var(--third-brand-color);
 }
 
 .best-selling-card {
@@ -234,6 +237,8 @@ img {
 .winter-2021-collection {
     background: linear-gradient(rgba(38, 37, 28, 0.5), rgba(82, 80, 70, 0.3)), url(../img/winter-2021-collection.jpg) center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 600px;
     color: var(--white-color);
     margin-top: 50px;
