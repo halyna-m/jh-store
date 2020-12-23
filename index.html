@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JH Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -25,6 +26,7 @@
             </h1>
             <p class="main-description">You find here what are you looking for</p>
             <button class="button banner-button">Best-selling products</button>
+            <div class="clock"></div>
         </div>
     </header>
     <main>
@@ -51,28 +53,41 @@
         <div class="switchover">
             <h2><span class="switchover-start">Best jewelry</span><br><span class="switchover-end">which you can imagine</span></h2>
         </div>
-        <section class="best-selling" id="best-selling">
+        <section class="best-selling container" id="best-selling">
             <h2>Best-selling Products</h2>
             <p class="best-selling-subtitle">Our customers' faves of the week</p>
-            <div class="best-selling-wrapper">
-                <article class="earrings best-selling-card">
+            <div class="best-selling-wrapper card-carousel">
+                <article class="earrings best-selling-card card" id="1">
                     <img src="img/earrings/circle-earrings.jpg" alt="Circle Earrings">
                     <h3>Stylish earrings</h3>
                     <p class="price">310$</p>
                     <button class="button">Order now</button>
                 </article>
-                <article class="rings best-selling-card">
+                <article class="rings best-selling-card card" id="2">
                     <img src="img/rings/stone-ring.jpg" alt="Stone Ring">
                     <h3>Diamond Promise Ring</h3>
                     <p class="price">350$</p>
                     <button class="button">Order now</button>
                 </article>
-                <article class="necklace best-selling-card">
+                <article class="necklace best-selling-card card" id="3">
                     <img src="img/necklaces/green-necklace.jpg" alt="Green Necklace">
                     <h3>Elegant necklace</h3>
                     <p class="price">380$</p>
                     <button class="button">Order now</button>
                 </article>
+                <article class="earrings best-selling-card card" id="4">
+                    <img src="img/earrings/circle-earrings.jpg" alt="Circle Earrings">
+                    <h3>Stylish earrings</h3>
+                    <p class="price">310$</p>
+                    <button class="button">Order now</button>
+                </article>
+                <article class="rings best-selling-card card" id="5">
+                    <img src="img/rings/stone-ring.jpg" alt="Stone Ring">
+                    <h3>Diamond Promise Ring</h3>
+                    <p class="price">350$</p>
+                    <button class="button">Order now</button>
+                </article>
+                <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
             </div>
         </section>
         <div class="winter-2021-collection" id="winter-2021-collection">
@@ -114,13 +129,31 @@
                 </article>
             </div>
         </section>
-        <!--<div class="counter">
+        <div class="counter">
             <h2>10% off for our new collection</h2>
             <p>Do you want to buy jewelry from our new collection? 
-Enjoy the benefits of special offer for our clients - get 10% off. Offer is valid until December 20.</p>
+Enjoy the benefits of special offer for our clients - get 10% off. Offer is valid until Janauary 16.</p>
+            <div id="countdown" class="countdown">
+                <div class="time">
+                    <h2 id="days">00</h2>
+                    <small>days</small>
+                </div>
+                <div class="time">
+                    <h2 id="hours">00</h2>
+                    <small>hours</small>
+                </div>
+                <div class="time">
+                    <h2 id="minutes">00</h2>
+                    <small>minutes</small>
+                </div>
+                <div class="time">
+                    <h2 id="seconds">00</h2>
+                    <small>seconds</small>
+                </div>
+            </div>
             <button class="button">Order now</button>
         </div>
-        <div class="top-jewelry">
+        <!--<div class="top-jewelry">
             <article class="our-top-jewelry">
                 <img src="img/top-rings.jpg" alt="Our Top Rings">
                 <h2>Our Top Jewelry</h2>
@@ -221,5 +254,8 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
             </div>
         </nav>
     </footer> -->
+    <script src="js/clock.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

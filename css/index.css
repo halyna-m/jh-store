@@ -122,6 +122,12 @@ body {
     }
 }
 
+.clock {
+    align-self: flex-end;
+    color: var(--second-brand-color);
+    font-weight: bold;
+}
+
 h1 span {
     display: block;
     max-height: 80px;
@@ -212,8 +218,16 @@ img {
     color: var(--third-brand-color);
 }
 
+.best-selling {
+    min-height: 600px;
+}
+
+.best-selling h2 {
+    color: var(--third-brand-color);
+}
+
 .best-selling-card {
-    margin: 20px;
+    margin: 10px;
 }
 
 .best-selling-card h3 {
@@ -224,14 +238,79 @@ img {
     color: var(--brand-color);
     font-size: 28px;
     font-weight: 600;
-    margin: 5px 0 20px 0;
 }
 
 .best-selling-subtitle {
     text-align: center;
     font-size: 18px;
-    margin-bottom: 30px;
     padding-top: 0;
+    color: var(--white-color)
+}
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+  
+}
+
+.container {
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 2em;
+  background-color: var(--second-brand-color);
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 20px;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 200px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  border-radius: 1em;
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+    max-height: 220px;
+    max-width: 170px;
 }
 
 .winter-2021-collection {
@@ -278,6 +357,67 @@ img {
 
 article.rings h3 {
     font-size: 18px;
+}
+
+.counter {
+    background-color: var(--second-brand-color);
+    color: var(--white-color);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.counter p {
+    max-width: 500px;
+    text-align: center;
+}
+
+.year {
+  font-size: 200px;
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.countdown {
+    display: flex;
+    flex-direction: row;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.time h2 {
+  margin: 0 0 5px;
+}
+
+@media (max-width: 500px) {
+
+  .time {
+    margin: 5px;
+  }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time small {
+    font-size: 10px;
+  }
 }
 
 .footer-menu a {
