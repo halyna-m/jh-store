@@ -21,6 +21,4 @@ function updateCountdown() {
   seconds.innerHTML = s < 10 ? '0' + s : s;
 }
 
-
-
 setInterval(updateCountdown, 1000);
