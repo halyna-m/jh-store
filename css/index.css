@@ -20,33 +20,67 @@ body {
     margin: auto;
 }
 
+.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
 .logo {
     font-family: Sarala, sans-serif;
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-left: 50px;
     font-weight: bold;
-}
-
-.menu a {
-    display: block;
     text-decoration: none;
-    color: var(--main-color);
-    margin: 10px;
-    font-weight: 500;
-    font-size: 15px;
+    color: var(--second-brand-color);
 }
 
-.menu a:hover {
+#menu a {
+        display: block;
+        text-decoration: none;
+        color: var(--main-color);
+        margin: 10px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+#menu a:hover {
     color: var(--brand-color);
 }
 
 @media (max-width: 735px) {
-    header nav .menu {
+    .topnav {
+        overflow: hidden;
+        background-color: var(--third-brand-color);
+        display: flex;
+    }
+
+    .topnav #menu {
+        display: none;
+    }
+
+    .topnav a {
+        color: var(--white-color);
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a.icon {
+        background: var(--third-brand-color);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #menu {
         display: flex;
         justify-content: center;
         text-align: center;
-        flex-direction: column;
+        width: 100%;
     }
 }
 
@@ -55,11 +89,15 @@ body {
         display: flex;
     }
 
-    header nav .menu {
+    header nav #menu {
         display: flex;
         flex: 1;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .fa-bars {
+    display: none;
     }
 }
 

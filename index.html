@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JH Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">JH</div>
-            <div class="menu">
-                <a href="#promotions">Promotions</a>
-                <a href="#best-selling">Best-selling</a>
-                <a href="#winter-2021-collection">2021 Collection</a>
-                <a href="#contact-us">Contact Us</a>
-                <button class="button nav-button">Shop Now</button>
+            <div class="topnav">
+                <a href="#home" class="active logo">JH</a>
+                <div id="menu">
+                    <a href="#promotions">Promotions</a>
+                    <a href="#best-selling">Best-selling</a>
+                    <a href="#winter-2021-collection">2021 Collection</a>
+                    <a href="#contact-us">Contact Us</a>
+                    <button class="button nav-button">Shop Now</button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </nav>
         <div class="banner">
@@ -256,5 +262,6 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
     <script src="js/clock.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/burger-menu.js"></script>
 </body>
 </html>
