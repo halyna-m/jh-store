@@ -50,6 +50,14 @@ body {
     color: var(--brand-color);
 }
 
+#menu a.button:hover {
+    color: var(--white-color);
+}
+
+a.button {
+    text-decoration: none;
+}
+
 @media (max-width: 735px) {
     .topnav {
         overflow: hidden;
