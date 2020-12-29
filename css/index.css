@@ -477,6 +477,16 @@ article.rings h3 {
   }
 }
 
+.top-jewelry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.top-jewelry-content {
+    min-height: 510px;
+    padding: 20px;
+}
+
 .our-benefits {
     display: grid;
     grid-template-columns: 1fr;
