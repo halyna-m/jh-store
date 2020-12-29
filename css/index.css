@@ -477,6 +477,35 @@ article.rings h3 {
   }
 }
 
+.our-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+@media (min-width: 400px) {
+    .our-benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 800px) {
+    .our-benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-top: 50px;
+    }
+}
+
+.benefits {
+    padding: 10px;
+}
+
+.benefits img {
+    max-width: 80px;
+}
+
 .contact-us {
     display: grid;
     grid-template-columns: 1fr 1fr;
