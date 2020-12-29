@@ -208,36 +208,45 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
             </article>
         </div>
         <section class="contact-us" id="contact-us">
-            <h2 id="contacs">Contact Us</h2>
-            <form method="POST" action="https://formspree.io/f/moqpnogj" >
-                <label>Your name:
-                    <input type="text" name="user-name" placeholder="Your name">
-                </label>
-                <br>
-                <label>Your e-mail:
-                    <input type="email" name="user-email" placeholder="Your email">
-                </label>
-                <br>
-                <label>Your phone number:
-                    <input type="text" name="phone-number" placeholder="Your phone number">
-                </label>
-                <br>
-                <label>Your message:
-                    <textarea name="message" placeholder="Your message"></textarea>
-                </label>
-                <br>
-                <input type="submit">
-            </form>
-            <p>We are always happy to chat with you. Contact us in any convenient way and we will answer all your questions.</p>
-            <h3>Address</h3>
-            <p>5 S Main street, Los Angeles, USA</p>
-            <h3>Hours</h3>
-            <p>Monday - Saturday: 11 AM - 9 PM</p>
-            <p>Sunday: 11 AM - 7 PM</p>
-            <h3>Contacts</h3>
-            <p>+1 (234) 567 89 00</p>
-            <p>jh@gmail.com</p>
+            <div class="contact-info">
+                <h2 id="contacs">Contact Us</h2>
+                <p>We are always happy to chat with you. Contact us in any convenient way and we will answer all your questions.</p>
+                <h3>Address</h3>
+                <p>5 S Main street, Los Angeles, USA</p>
+                <h3>Hours</h3>
+                <p>Monday - Saturday: 11 AM - 9 PM</p>
+                <p>Sunday: 11 AM - 7 PM</p>
+                <h3>Contacts</h3>
+                <p>+1 (234) 567 89 00</p>
+                <p>jh@gmail.com</p>
+            </div>
+            <div class="contact-form">
+                <form method="POST" action="https://formspree.io/f/moqpnogj" >
+                    <label>Your name:
+                        <input type="text" name="user-name" placeholder="Your name">
+                    </label>
+                    <br>
+                    <label>Your e-mail:
+                        <input type="email" name="user-email" placeholder="Your email">
+                    </label>
+                    <br>
+                    <label>Your phone number:
+                        <input type="text" name="phone-number" placeholder="Your phone number">
+                    </label>
+                    <br>
+                    <label>Your message:
+                        <textarea name="message" placeholder="Your message"></textarea>
+                    </label>
+                    <br>
+                    <input type="submit" class="submit">
+                </form>
+            </div>
         </section>
+        <div class="map">
+            <iframe 
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.889692026837!2d-118.25075118482884!3d34.04670058060751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64a73b737b9%3A0x5495cdb84930edfa!2zUyBNYWluIFN0ICYgNXRoIFN0LCBMb3MgQW5nZWxlcywgQ0EgOTAwMTMsINCh0L_QvtC70YPRh9C10L3RliDQqNGC0LDRgtC4INCQ0LzQtdGA0LjQutC4!5e0!3m2!1suk!2spl!4v1609237571418!5m2!1suk!2spl'>
+            </iframe>
+        </div>
     </main>
     <footer>
         <nav>
@@ -256,7 +265,7 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
                 <label>Your e-mail:
                     <input type="email" name="email" placeholder="Your e-mail">
                 </label>
-                <input type="submit">
+                <input type="submit" class="submit">
                 </form>
             </div>
         </nav>
@@ -265,5 +274,6 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
     <script src="js/countdown.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/burger-menu.js"></script>
+    <script src="js/map.js"></script>
 </body>
 </html>
