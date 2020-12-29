@@ -484,3 +484,55 @@ article.rings h3 {
     width: 300px;
     margin: 10px;
 }
+
+footer {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer .logo, .footer-menu a {
+    color: var(--white-color);
+    text-align: center;
+}
+
+footer .logo {
+    margin: 30px 0;    
+}
+
+.footer-menu a, .footer-menu label {
+    font-size: 16px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer .join-newsletter {
+    margin: 30px 0;
+}
+
+footer .join-newsletter input {
+    background-color: rgb(76, 76, 76);
+    border-radius: 5px;
+    border:0 none;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+form {
+    text-align: center;
+}
