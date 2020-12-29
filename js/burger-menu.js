@@ -1,8 +1,8 @@
-function myFunction() {
-  var x = document.getElementById("menu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+function showBurgerMenu() {
+  const menu = document.getElementById("menu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
   } else {
-    x.style.display = "block";
+    menu.style.display = "block";
   }
 }

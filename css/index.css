@@ -61,7 +61,7 @@ a.button {
 @media (max-width: 735px) {
     .topnav {
         overflow: hidden;
-        background-color: var(--third-brand-color);
+        background-color: var(--second-brand-color);
         display: flex;
     }
 
@@ -70,14 +70,17 @@ a.button {
     }
 
     .topnav a {
-        color: var(--white-color);
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
     }
 
+    #menu a {
+        color: var(--white-color);
+    }
+
     .topnav a.icon {
-        background: var(--third-brand-color);
+        background: var(--second-brand-color);
         display: block;
         position: absolute;
         right: 0;
@@ -89,6 +92,14 @@ a.button {
         justify-content: center;
         text-align: center;
         width: 100%;
+    }
+
+    a.active.logo {
+        color: var(--third-brand-color)
+    }
+
+    #menu a.button.nav-button {
+        color: var(--second-brand-color);
     }
 }
 
