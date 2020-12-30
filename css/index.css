@@ -6,10 +6,6 @@ h1, h2, h3, p, button, span, a, div, section, article {
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 :root {
     font-family: Poppins, sans-serif;
     --main-color: #000;
@@ -17,6 +13,7 @@ html {
     --second-brand-color: #081f62;
     --third-brand-color: #6f8eeb;
     --white-color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,10 +64,14 @@ a.button {
     text-decoration: none;
 }
 
-@media (max-width: 955px) {
+.col-5, .col-3, .col-2 {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 865px) {
     .topnav {
         overflow: hidden;
-        background-color: var(--second-brand-color);
         display: flex;
     }
 
@@ -84,12 +85,7 @@ a.button {
         font-size: 17px;
     }
 
-    #menu a {
-        color: var(--white-color);
-    }
-
     .topnav a.icon {
-        background: var(--second-brand-color);
         display: block;
         position: absolute;
         right: 0;
@@ -112,12 +108,12 @@ a.button {
     }
 }
 
-@media (min-width: 955px) {
-    header nav {
+@media (min-width: 865px) {
+    .topnav {
         display: flex;
     }
 
-    header nav #menu {
+    .topnav #menu {
         display: flex;
         flex: 1;
         justify-content: flex-end;
@@ -294,6 +290,7 @@ img {
 
 .best-selling-card {
     margin: 10px;
+    background-color: var(--white-color);
 }
 
 .best-selling-card h3 {
@@ -321,7 +318,7 @@ img {
   
 }
 
-.container {
+.best-selling.container {
   overflow: hidden;
   padding: 20px;
   margin-top: 2em;
@@ -430,7 +427,7 @@ article.rings h3 {
         grid-template-columns: 1fr;
     } 
 
-@media (min-width: 500px) {
+@media (min-width: 550px) {
    .products-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
