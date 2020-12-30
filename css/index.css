@@ -6,6 +6,10 @@ h1, h2, h3, p, button, span, a, div, section, article {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     font-family: Poppins, sans-serif;
     --main-color: #000;
