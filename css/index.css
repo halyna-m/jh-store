@@ -69,6 +69,10 @@ a.button {
     margin-bottom: 0;
 }
 
+.navbar {
+    padding: 0;
+}
+
 @media (max-width: 865px) {
     .topnav {
         overflow: hidden;
@@ -235,6 +239,10 @@ img {
     display: block;
     margin: auto;
     width: 100%;
+}
+
+.promotions, #best-selling, #contact-us  {
+    padding-top: 45px;
 }
 
 .promotion-category {
