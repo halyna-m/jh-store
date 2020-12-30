@@ -41,6 +41,11 @@ body {
     color: var(--second-brand-color);
 }
 
+.logo:hover {
+    text-decoration: none;
+    color: var(--brand-color);
+}
+
 #menu a {
         display: block;
         text-decoration: none;
