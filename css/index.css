@@ -420,6 +420,36 @@ article.rings h3 {
     font-size: 18px;
 }
 
+.products-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+
+@media (min-width: 500px) {
+   .products-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+@media (min-width: 820px) {
+   .products-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+
+@media (min-width: 1070px) {
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.products-container div {
+    max-width: 100%;
+}
+
 .counter {
     background-color: var(--second-brand-color);
     color: var(--white-color);
