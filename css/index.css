@@ -62,7 +62,7 @@ a.button {
     text-decoration: none;
 }
 
-@media (max-width: 735px) {
+@media (max-width: 955px) {
     .topnav {
         overflow: hidden;
         background-color: var(--second-brand-color);
@@ -107,7 +107,7 @@ a.button {
     }
 }
 
-@media (min-width: 735px) {
+@media (min-width: 955px) {
     header nav {
         display: flex;
     }

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JH Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/shop.css">
     <link rel="icon" href="img/ring.svg">
 </head>
 <body>
@@ -19,6 +21,10 @@
                     <a href="#winter-2021-collection">2021 Collection</a>
                     <a href="#contact-us">Contact Us</a>
                     <a href="shop.html" class="button nav-button">Shop Now</a>
+                    <a class="nav-link openCartLink" href="#modal-cart" data-toggle="modal">
+                      <i class="fas fa-shopping-cart"></i>
+                        Cart<span id="cart-badge" class="badge"></span>
+                    </a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="showBurgerMenu()">
                     <i class="fa fa-bars"></i>
@@ -106,33 +112,12 @@
             <a href="#our-fave-finds" class="button banner-button">Our faves</a>
         </div>
         <section class="our-fave-finds" id="our-fave-finds">
-            <h2>Our Fave Finds</h2>
+            <h2 id="products">Our Fave Finds</h2>
             <p>The best designer products from the 2020 collections.</p>
-            <div class="our-fave-finds-wrapper">
-                <article class="rings">
-                    <img src="img/rings/cross-ring.jpg" alt="Cross Ring">
-                    <h3>Cross Ring</h3>
-                    <p class="price">320$</p>
-                    <a href="shop.html" class="button">Order Now</a>
-                </article>
-                <article class="rings">
-                    <img src="img/rings/sphere-ring.jpg" alt="Sphere Ring">
-                    <h3>Sphere Ring</h3>
-                    <p class="price">325$</p>
-                    <a href="shop.html" class="button">Order Now</a>
-                </article>
-                <article class="rings">
-                    <img src="img/rings/wings-ring.jpg" alt="Wings Ring">
-                    <h3>Wings Ring</h3>
-                    <p class="price">365$</p>
-                    <a href="shop.html" class="button">Order Now</a>
-                </article>
-                <article class="rings">
-                    <img src="img/square-img-ring.jpg" alt="Diamond Ring">
-                    <h3>Diamond Ring</h3>
-                    <p class="price">399$</p>
-                    <a href="shop.html" class="button">Order Now</a>
-                </article>
+            <button class="sort-asc btn-primary btn-sm">Sort Ascending</button>
+            <button class="sort-desc btn-primary btn-sm">Button Descending</button>
+            <div class="row products-container">
+               <!--Products are dynamically generated here-->
             </div>
         </section>
         <div class="counter">
@@ -208,7 +193,8 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
         <section class="contact-us" id="contact-us">
             <div class="contact-info">
                 <h2 id="contacs">Contact Us</h2>
-                <p>We are always happy to chat with you. Contact us in any convenient way and we will answer all your questions.</p>
+                <p>We are always happy to chat with you.</p>
+                <p>Contact us and we will answer all your questions.</p>
                 <h3>Address</h3>
                 <p>5 S Main street, Los Angeles, USA</p>
                 <h3>Hours</h3>
@@ -245,6 +231,62 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
                 src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.889692026837!2d-118.25075118482884!3d34.04670058060751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64a73b737b9%3A0x5495cdb84930edfa!2zUyBNYWluIFN0ICYgNXRoIFN0LCBMb3MgQW5nZWxlcywgQ0EgOTAwMTMsINCh0L_QvtC70YPRh9C10L3RliDQqNGC0LDRgtC4INCQ0LzQtdGA0LjQutC4!5e0!3m2!1suk!2spl!4v1609237571418!5m2!1suk!2spl'>
             </iframe>
         </div>
+        <!-- Modal Product Info -->
+        <div class="modal fade" id="productInfoModal" tabindex="-1" role="dialog" aria-labelledby="productInfoLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productInfoLabel">Product Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="card-img-top" src="" alt="">
+                    <h4 class="card-title"></h4>
+                    <p class="card-text"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary buy" data-id="id">Buy</button>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Modal Cart -->
+            <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-product-list-container"></div>
+                    <hr>
+                    <div class="container">
+                    <form class="form-contacts">
+                        <div class="form-group row">
+                        <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                        <input class="form-control col-8" type="text" id="client-name" required>
+                        </div>
+                        <div class="form-group row">
+                        <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                        <input class="form-control col-8" type="email" id="client-email" required>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary order">Order</button>
+                </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <nav>
@@ -268,10 +310,17 @@ Enjoy the benefits of special offer for our clients - get 10% off. Offer is vali
             </div>
         </nav>
     </footer> 
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="js/clock.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/burger-menu.js"></script>
-    <script src="js/map.js"></script>
+    <script async src="js/shop/alert-window.js"></script>
+    <script defer src="js/shop/products-service.js"></script>
+    <script defer src="js/shop/cart.js"></script>
+    <script defer src="js/shop/product-list.js"></script>    
+    <script defer src="js/shop/index.js"></script>
 </body>
 </html>
