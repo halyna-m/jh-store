@@ -487,6 +487,21 @@ article.rings h3 {
     padding: 20px;
 }
 
+.top-jewelry-content .under-heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--brand-color);
+}
+
+.top-jewelry-content h2 {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.top-jewelry-content p {
+    margin-bottom: 20px;
+}
+
 .our-benefits {
     display: grid;
     grid-template-columns: 1fr;
